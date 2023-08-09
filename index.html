@@ -29,7 +29,14 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("jKHjXPl1ye4zTbnSf");
+   })();
+</script>
   
 </head>
 
@@ -80,7 +87,7 @@
     <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Welcome to <span>YuriTech ICT</span></h1>
+          <h1>Welcome to <span>YuriTech</span></h1>
           <br> <br>
           <h2> <i> Forcused on delivering the best </i> <b> SERVICES </b><i>to our</i> <b> Customers</b></h2>
          
@@ -1197,7 +1204,7 @@
                 <div class="validate" ></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -1205,7 +1212,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent to YuriTech. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit" value="send">Send Message</button></div>
+              <div class="text-center"><button type="submit" value="send" onclick="sendMail()">Send Message</button></div>
             </form>
 
           </div>
@@ -1215,7 +1222,8 @@
       </div>
       <marquee behavior="alternate"> <b> <i style="color: white;"> We do not compromise on quality. Trust us, <i><i><b><b>We'll give you more value than we promised</b></b></i></i> </i></marquee>
     </section><!-- End Contact Section -->
-    <div id="calm calm" style="
+    
+        <div id="calm calm" style="
     position: fixed;
     bottom: 10px;
     left: 10px;
